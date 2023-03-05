@@ -50,6 +50,7 @@ fi
 
 # xrandr
 xsetroot -cursor_name left_ptr
+# setwp
 nitrogen --restore &
 picom -f &
 exec bspwm
