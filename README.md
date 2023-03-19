@@ -18,6 +18,9 @@
   - flameshot
   - pavucontrol 
   - pulseaudio
+  - pulseaudio-equalizer
+  - pulseaudio-alsa
+  - alsa-utils
   - htop
   - nautilus
   - discord
@@ -50,7 +53,7 @@
 
   ### You can copy the following command to install all the packages:
   ```
-  sudo pacman -S --noconfirm xorg-server xorg-xsetroot xorg-xrandr xorg-xinit flameshot pavucontrol pulseaudio htop nautilus discord obs-studio libreoffice p7zip zip unzip pacman-contrib neofetch xf86-video-qxl python openssh bspwm sxhkd rofi nitrogen picom kitty chromium ttf-hack-nerd firefox zsh git bat lsd neovim ranger npm
+  sudo pacman -S --noconfirm xorg-server xorg-xsetroot xorg-xrandr xorg-xinit flameshot pavucontrol pulseaudio pulseaudio-equalizer pulseaudio-alsa alsa-utils htop nautilus discord obs-studio libreoffice p7zip zip unzip pacman-contrib neofetch xf86-video-qxl python openssh bspwm sxhkd rofi nitrogen picom kitty chromium ttf-hack-nerd firefox zsh git bat lsd neovim ranger npm
   ```
   ## 
   * **Note:** You can use the automatic installer tool listed under my [Arch-Tools](https://github.com/ValenRM/Arch-Tools) repository.
