@@ -1,5 +1,6 @@
 t=0
 sleep_pid=0
+mode=$(nmcli device show | grep -q "WIRE")
 
 toggle() {
     t=$(((t + 1) % 2))
@@ -14,17 +15,17 @@ trap "toggle" USR1
 while true; do
 	if [ $t -eq 0 ]; then
 
-		if nmcli device show | grep -q 'WIRE'; then
+		if [ $mode != "" ]; then
 			echo "󱎔"
 		else 
 			echo ""
 		fi
 	else
 		ip=$(nmcli device show | grep IP4.ADDRESS | awk '{print $2}')
-		if nmcli device show | grep -q 'WIRE'; then
+		if [ $mode != "" ]; then
 			echo -e "󱎔 ${ip}"
 		else
-			echo "$ip WIFI "
+			echo "  ${ip}"
 		fi
 	fi
 	sleep 1 &
