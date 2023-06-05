@@ -20,4 +20,7 @@ bspc rule -a Screenkey manage=off
 bspc config focus_follows_pointer true
 bspc config border_width 0
 
+xset dpms 0 0 0 &
+xset s off &
+
 $HOME/.config/polybar/launch.sh
