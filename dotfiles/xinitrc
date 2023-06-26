@@ -57,6 +57,12 @@ if [[ "$secondary_output" == "connected" ]]; then
 fi
 
 
+# Get mouse ID
+mouse_id=$(xinput | grep -w "Logitech USB Receiver" | head -n 1 | grep -o 'id=[0-9][0-9]' | sed 's/id=//')
+
+# Set mouse sensitivity
+xinput --set-prop $mouse_id 'Coordinate Transformation Matrix' 0.55 0 0 0 0.55 0 0 0 1
+
 xsetroot -cursor_name left_ptr
 nitrogen --set-zoom-fill --save $HOME/Documents/Wallpapers/nord-street.png
 nitrogen --restore &
